@@ -62,6 +62,9 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
 #   4. NETWORKING
 #   ----------------------------------
 
+# autocomplete ssh from known_hosts
+complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
+
 alias myip='curl api.ipify.org -w "\n"'                     # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
