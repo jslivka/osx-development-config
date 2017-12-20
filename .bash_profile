@@ -38,7 +38,6 @@ fi
 #   2. TERMINAL
 #   ----------------------------------
 
-export PS1="\u@\h (╯°□°）╯ ︵ ┻━┻: "
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
