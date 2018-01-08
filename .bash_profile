@@ -20,6 +20,9 @@
 export PATH="$PATH:/usr/local/bin/"
 export PATH="$HOME/bin/:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+# set go env
+export GOROOT=${HOME}/goroot
+export GOPATH=${HOME}/gopath
 
 # Set default blocksize for ls, df, du
 # from: http://hints.macworld.com/comment.php?mode=view&cid=24491
