@@ -50,6 +50,15 @@ brew install wget --with-iri
 brew install python
 brew install python3
 
+# Setup golang
+brew install go
+
+# make go dir
+cd ~
+mkdir goroot
+mkdir gopath
+source ~/.bash_profile
+
 # Install ruby-build and rbenv
 brew install ruby-build
 brew install rbenv
