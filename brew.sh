@@ -46,6 +46,9 @@ chsh -s /usr/local/bin/bash
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
+# Install Java 8
+brew cask install caskroom/versions/java8
+
 # Install Python
 brew install python
 brew install python3
@@ -114,7 +117,6 @@ brew tap caskroom/versions
 # https://www.alfredapp.com/
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
