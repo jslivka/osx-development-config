@@ -124,7 +124,10 @@ brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
-brew cask install --appdir="/Applications" pycharm
+# IDEs
+brew cask install --appdir="/Applications" pycharm-ce
+brew cask install --appdir="/Applications" caskroom/cask/intellij-idea-ce
+
 brew cask install google-cloud-sdk
 brew cask install minikube
 brew cask install spectacle
