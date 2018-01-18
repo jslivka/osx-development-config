@@ -98,7 +98,6 @@ brew install webkit2png
 brew install zopfli
 brew install pkg-config libffi
 brew install pandoc
-brew install meld
 
 # Lxml and Libxslt
 brew install libxml2
@@ -132,6 +131,7 @@ brew cask install --appdir="/Applications" caskroom/cask/intellij-idea-ce
 brew cask install google-cloud-sdk
 brew cask install minikube
 brew cask install spectacle
+brew cask install meld
 
 # misc casks
 brew cask install --appdir="/Applications" google-chrome
