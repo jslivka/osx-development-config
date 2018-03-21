@@ -112,5 +112,3 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   5. NOTES & ETC.
 #   ----------------------------------
 
-export PATH=$PATH:~/proj/istio-0.4.0/bin
-alias k='kubectl'
