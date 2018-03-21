@@ -1,7 +1,7 @@
 #  ---------------------------------------------------------------------------
 #
 #  Who: John Slivka <slivkajb@gmail.com>
-#  Description:  This file holds all my BASH configurations and aliases
+#  Description:  This file holds all my bash configurations and aliases
 #
 #  Sections:
 #  1.  Environment Configuration
@@ -16,17 +16,32 @@
 #   1. ENVIRONMENT CONFIGURATION
 #   ------------------------------------
 
+# show git branch in prompt
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# ls colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 # Set paths
 export PATH="$PATH:/usr/local/bin/"
 export PATH="$HOME/bin/:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 # set go env
-export GOROOT=${HOME}/goroot
-export GOPATH=${HOME}/gopath
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+# vim
+source ~/.vimrc
 
 # Set default blocksize for ls, df, du
 # from: http://hints.macworld.com/comment.php?mode=view&cid=24491
 export BLOCKSIZE=1k
+
+# istio binaries
+export PATH=$PATH:~/proj/istio-0.4.0/bin
 
 # set up amazon web services credentials
 export AWS_CONFIG_FILE="${HOME}/.aws/config"
@@ -47,7 +62,11 @@ alias mkdir='mkdir -pv'
 alias ssh='ssh -oStrictHostKeyChecking=no'
 alias qfind="find . -name "
 
-#  lr:  Full Recursive Directory Listing
+# K8S
+alias k=kubectl
+alias ks="kubectl -n kube-system"
+
+# lr:  Full Recursive Directory Listing
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 #   ----------------------------------
@@ -63,9 +82,6 @@ alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10
 #   ----------------------------------
 #   4. NETWORKING
 #   ----------------------------------
-
-# autocomplete ssh from known_hosts
-complete -W "$(echo `cat ~/.ssh/known_hosts | cut -f 1 -d ' ' | sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh
 
 alias myip='curl api.ipify.org -w "\n"'                     # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
@@ -96,4 +112,5 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 #   5. NOTES & ETC.
 #   ----------------------------------
 
-
+export PATH=$PATH:~/proj/istio-0.4.0/bin
+alias k='kubectl'
