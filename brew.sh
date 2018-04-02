@@ -105,10 +105,6 @@ brew install libxslt
 brew link libxml2 --force
 brew link libxslt --force
 
-# Install Heroku
-brew install heroku-toolbelt
-heroku update
-
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
@@ -131,7 +127,6 @@ brew cask install --appdir="/Applications" caskroom/cask/intellij-idea-ce
 brew cask install google-cloud-sdk
 brew cask install minikube
 brew cask install spectacle
-brew cask install meld
 
 # misc casks
 brew cask install --appdir="/Applications" google-chrome
