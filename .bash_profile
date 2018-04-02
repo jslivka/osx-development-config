@@ -30,9 +30,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export PATH="$PATH:/usr/local/bin/"
 export PATH="$HOME/bin/:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-# set go env
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
+# set go en
+export PATH=$PATH:/usr/local/go/binv
+export GOPATH=$HOME/proj/go
 # vim
 source ~/.vimrc
 
@@ -132,4 +132,5 @@ complete -F _complete_ssh_hosts ssh
 #   ----------------------------------
 #   5. NOTES & ETC.
 #   ----------------------------------
+
 
