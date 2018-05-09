@@ -141,6 +141,7 @@ brew install ansible
 brew install awscli
 brew install jq
 brew install kubernetes-cli
+brew install kubernetes-helm
 brew install packer
 brew install transcrypt
 brew install watch
