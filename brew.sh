@@ -119,7 +119,6 @@ brew cask install --appdir="~/Applications" xquartz
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" macdown
 # IDEs
 brew cask install visual-studio-code
 
@@ -133,9 +132,6 @@ brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" 1password
 
 # Install Docker, additional development tool deps
-brew install docker
-brew install docker-machine
-brew install docker-machine-driver-xhyve
 brew install hub
 brew install ansible
 brew install awscli
